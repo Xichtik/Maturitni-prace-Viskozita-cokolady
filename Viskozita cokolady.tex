@@ -660,44 +660,48 @@ Pro kapaliny, jejichž chování je složitější, vznikají jiné modely, kter
 
 K~měření viskozity kapalin (nebo kapalných směsí) se využívají přístroje zvané \emph{viskozimetry}. Viskozimetry většinou měří zdánlivou viskozitu, protože je měření prováděno při neznámém tečném napětí/rychlosti deformace. To z~principu nevadí u newtonovských kapalin. Přístroje, které kromě viskozity měří i smykové napětí nebo rychlost deformace, při kterých byla viskozita měřena, a jsou tedy vhodné k~měření tokových křivek nenewtonovských kapalin, se správně nazývají \emph{reometry}.~\cite{wiki:Viscometer}
 \par
-Stejně jako u měřicích přístrojů pro měření většiny ostatních veličin, i u viskozimetrů existuje několik různých konstrukcí, kdy každá pro měření dané veličiny používá jiného principu. Viskozimetry využívají k posouzení viskozity vždy jednu konkrétní vlastnost kapaliny, konkrétně:
+Stejně jako u měřicích přístrojů pro měření většiny ostatních veličin, i u viskozimetrů existuje několik různých konstrukcí, kdy každá pro měření dané veličiny používá jiného principu. Viskozimetry využívají k~posouzení viskozity vždy jednu konkrétní vlastnost kapaliny, konkrétně:
 \begin{itemize}[noitemsep, topsep = 0pt]
     \item Rychlost tečení kapaliny (trubicí/kapilárou), která závisí na viskozitě (jakožto vnitřním tření). Na tomto principu fungují kapilární a nálevkové viskozimetry.
-    \item Odpor, který kapalina klade tělesu, které se v ní pohybuje. Velikost tohoto odporu závisí na viskozitě. Na tomto principu fungují tělískové a rotační viskozimetry.
+    \item Odpor, který kapalina klade tělesu, které se v~ní pohybuje. Velikost tohoto odporu závisí na viskozitě. Na tomto principu fungují tělískové a rotační viskozimetry.
 \end{itemize}
 Tyto druhy viskozimetrů si dovolím krátce popsat.
 
-\subsection{Kapilární viskozimetry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Kapilární viskozimetry}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Kapilární viskozimetry pracují na principu měření času, za který určitý objem kapaliny proteče skrz tenkou trubici kruhového průřezu (tj. kapiláru). Proto si nyní teoreticky popíšeme proudění kapaliny válcovou trubicí.
+Kapilární viskozimetry pracují na principu měření času, za který určitý objem kapaliny proteče skrz tenkou trubici kruhového průřezu (tj.~kapiláru). Proto si nyní teoreticky popíšeme proudění kapaliny válcovou trubicí.
 
 \subsubsection{Tečení kapaliny trubicí, odvození Hagenova-Poiseulleova zákona}
-\label{sec:tečení_trubicí}
+\label{sec:tečení_trubicí}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Při proudění kapaliny skrz trubici platí, že rychlost proudění je nejvyšší ve středu trubice (uvažujeme laminární proudění). Kapalina je v mezní vrstvě těsně u stěny vůči stěně v klidu, čím více se přibližujeme ke středu proudění, tím rychlejší je proudění kapaliny. Existuje zde tedy gradient rychlosti, jelikož se rychlost mění vzhledem ke vzdálenosti od osy trubice. V zásadě se jedná o případ podobný Couettovu proudění (viz str. \pageref{sec:Couettovo_proudění}), jen se nepohybujeme v rovině, nýbrž ve válci. Použitím vzorců č. \ref{eq:dot_gamma} a \ref{eq:gradient_gamma} můžeme rychlost deformace kapaliny v trubici vyjádřit vztahem:~\cite{book:Calibration_of_viscometers}
+Při proudění kapaliny skrz trubici platí, že rychlost proudění je nejvyšší ve středu trubice (uvažujeme laminární proudění). Kapalina je v~mezní vrstvě těsně u stěny vůči stěně v~klidu, čím více se přibližujeme ke středu proudění, tím rychlejší je proudění kapaliny. Existuje zde tedy gradient rychlosti, jelikož se rychlost mění vzhledem ke vzdálenosti od osy trubice. V~zásadě se jedná o případ podobný Couettovu proudění (viz str.~\pageref{sec:Couettovo_proudění}), jen se nepohybujeme v~rovině, nýbrž ve válci. Použitím vzorců č.~\ref{eq:dot_gamma} a \ref{eq:gradient_gamma} můžeme rychlost deformace kapaliny v~trubici vyjádřit vztahem:~\cite{book:Calibration_of_viscometers}
 \begin{equation}
     \dot\gamma = -\frac{\dd v}{\dd r}\text{,}
     \label{eq:gamma_gradient}
 \end{equation}
-kde $v$ je rychlost proudění a $r$ je vzdálenost od osy trubice. Dle Newtonova zákona viskozity (vzorec č. \ref{eq:Newtonův zákon viskozity}, str. \pageref{eq:Newtonův zákon viskozity}) pak platí, že tečné napětí v kapalině bude rovno:~\cite{book:Calibration_of_viscometers}
+kde $v$ je rychlost proudění a $r$ je vzdálenost od osy trubice. Dle Newtonova zákona viskozity (vzorec č.~\ref{eq:Newtonův zákon viskozity}, str.~\pageref{eq:Newtonův zákon viskozity}) pak platí, že tečné napětí v~kapalině bude rovno:~\cite{book:Calibration_of_viscometers}
 \begin{equation}
     \tau = -\eta\frac{\dd v}{\dd r}\text{.}
 \end{equation}
+
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{figures/valce_kapaliny.png}
-    \caption{Znázornění kapalinových válců v trubici.~\cite{book:Calibration_of_viscometers}}
+    \caption{Znázornění kapalinových válců v~trubici.~\cite{book:Calibration_of_viscometers}}
     \label{fig:valce}
 \end{figure}
-Můžeme si představit, že kapalina je tvořena nekonečným množstvím soustředných dutých válců (jejichž plášť je nekonečně tenký). Znázornění těchto válců je na obrázku \ref{fig:valce}. Tyto kapalinové válce se v sobě vůči sobě navzájem pohybují, a na každý z nich působí tečné napětí. Toto tečné napětí působí na plochu kapaliny, která je rovna povrchu pláště našeho válce $S'$. Ten je roven:~\cite{book:Calibration_of_viscometers}
+
+Můžeme si představit, že kapalina je tvořena nekonečným množstvím soustředných dutých válců (jejichž plášť je nekonečně tenký). Znázornění těchto válců je na obrázku~\ref{fig:valce}. Tyto kapalinové válce se v~sobě vůči sobě navzájem pohybují, a na každý z~nich působí tečné napětí. Toto tečné napětí působí na plochu kapaliny, která je rovna povrchu pláště našeho válce $S'$. Ten je roven:~\cite{book:Calibration_of_viscometers}
 \begin{equation}
     S' = 2\pi rl\text{,}
 \end{equation}
-kde $r$ je poloměr válce (tj. vzdálenost stěny válce od osy trubice) a $l$ je délka trubice. Použitím vzorce č. \ref{eq:napeti_tau} získáváme, že viskózní odporová síla působící na daný válec je rovna:~\cite{book:Calibration_of_viscometers}
+kde $r$ je poloměr válce (tj.~vzdálenost stěny válce od osy trubice) a $l$ je délka trubice. Použitím vzorce č.~\ref{eq:napeti_tau} získáváme, že viskózní odporová síla působící na daný válec je rovna:~\cite{book:Calibration_of_viscometers}
 \begin{equation}
     F_\eta = \tau\cdot S' = -2\pi rl\eta\frac{\dd v}{\dd r}\text{.}
 \end{equation}
-Na každý z těchto válců působí tlaková síla, která kapalinu žene trubicí. Pro tu platí:~\cite{book:Calibration_of_viscometers}
+Na každý z~těchto válců působí tlaková síla, která kapalinu žene trubicí. Pro tu platí:~\cite{book:Calibration_of_viscometers}
 \begin{equation}
     F_p = \Delta p\cdot S = \Delta p\pi r^2\text{,}
 \end{equation}
@@ -706,7 +710,7 @@ kde $\Delta p$ je tlak působící na kapalinu, $S$ je průřez trubice a $r$ je
     \begin{split}
         \Delta p\pi r^2 &= -2\pi rl\eta\frac{\dd v}{\dd r}\text{,}\\
         \Delta pr &= -2l\eta\frac{\dd v}{\dd r}\text{,}\\
-        \frac{\dd v}{\dd r} &= -\frac{\Delta pr}{2l\eta}
+        \frac{\dd v}{\dd r} &= -\frac{\Delta pr}{2l\eta}\text{.}
     \end{split}
 \end{align}
 Rychlost proudění $v$ ve vzdálenosti $(R-r)$ od stěny trubice (kde $R$ je poloměr trubice) je pak určena takto:~\cite{book:Calibration_of_viscometers}
@@ -725,7 +729,7 @@ Dosazením $(R-r)$ zpět za $x$ dostáváme:
         \label{eq:rychlost_hagen_poiseull}
     \end{split}
 \end{align}
-Každým z námi uvažovaných válců proudí určité množství kapaliny. Průřez takovým dutým válcem s tloušťkou stěny $\dd r$ kolmo na jeho osu je vlastně mezikruží, které bude mít obsah:
+Každým z~námi uvažovaných válců proudí určité množství kapaliny. Průřez takovým dutým válcem s~tloušťkou stěny $\dd r$ kolmo na jeho osu je vlastně mezikruží, které bude mít obsah:
 \begin{equation}
     S = 2\pi r\dd r\text{.}
     \label{eq:obsah_hagen_poiseull}
@@ -734,7 +738,7 @@ Pro průtok kapaliny platí vztah $Q = Sv$. Dosazením ze vzorce \ref{eq:obsah_h
 \begin{equation}
     \dd Q = 2\pi r\dd rv\text{.}
 \end{equation}
-Průtok celou trubicí je pak součtem průtoků všemi infinitezimálními válci (kterých je nekonečně mnoho). Dosadíme tedy rychlost ze vztahu \ref{eq:rychlost_hagen_poiseull} a opět zintegrujeme vzhledem k $r$:~\cite{book:Calibration_of_viscometers}
+Průtok celou trubicí je pak součtem průtoků všemi infinitezimálními válci (kterých je nekonečně mnoho). Dosadíme tedy rychlost ze vztahu \ref{eq:rychlost_hagen_poiseull} a opět zintegrujeme vzhledem k~$r$:~\cite{book:Calibration_of_viscometers}
 \begin{align}
     \begin{split}
         Q &= \int_0^R\left(2\pi r\cdot \frac{\Delta p}{4l\eta}(R^2-r^2)\right)\dd r = \frac{2\pi\Delta p}{4l\eta}\int_0^R r(R^2-r^2)\dd r\\
@@ -746,7 +750,7 @@ Tento vztah se nazývá \emph{Hagenův-Poiseulleův zákon}. Jeho úpravami lze 
     Q = \frac{\Delta pS^2}{8\pi l\eta}\text{, a tedy: } \eta = \frac{\Delta ptS^2}{8\pi lV}\text{,}
     \label{eq:Hagen_Poiseull}
 \end{equation}
-kde $\Delta p$ tlak, který kapalinu žene, $\eta$ je dynamická viskozita kapaliny, $l$ je délka trubice (kapiláry), $Q$ je průtok, pro který platí $Q=\frac{V}{t}$, kde $V$ je objem kapaliny, který protekl trubicí za čas $t$, $r$ je poloměr trubice (kapiláry) a $S$ je průřez trubice (kapiláry). V kapilárních viskozimetrech je jedinou hnací silou tíhová síla kapaliny a jediný tlak, který zde působí, je hydrostatický tlak kapaliny. Platí tedy:
+kde $\Delta p$ tlak, který kapalinu žene, $\eta$ je dynamická viskozita kapaliny, $l$ je délka trubice (kapiláry), $Q$ je průtok, pro který platí $Q=\frac{V}{t}$, kde $V$ je objem kapaliny, který protekl trubicí za čas $t$, $r$ je poloměr trubice (kapiláry) a $S$ je průřez trubice (kapiláry). V~kapilárních viskozimetrech je jedinou hnací silou tíhová síla kapaliny a jediný tlak, který zde působí, je hydrostatický tlak kapaliny. Platí tedy:
 \begin{equation}
     \Delta p = h\rho g \text{, a tedy: }\eta = \frac{h\rho gtS^2}{8\pi lV}\text{.}
 \end{equation}
@@ -762,13 +766,13 @@ kde $\nu$ je kinematická viskozita kapaliny, $\eta$ je dynamická viskozita kap
 \par
 Ve skutečných viskozimetrech je pro naprostou přesnost ještě nutné uvažovat různé korekční faktory (aerostatický vztlak působící na kapalinu, tepelná roztažnost viskozimetru, změna teploty měřené kapaliny během měření a další)~\cite{book:Calibration_of_viscometers}, my je však uvažovat nebudeme.
 
-\subsubsection{Konstrukce a použití}
+\subsubsection{Konstrukce a použití}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Kapilární viskozimetry se vyrábí ze skla a mají tvar U-trubice. Část U-trubice (kapilára) je zúžena na přesně kalibrovaný průměr. Jedno rameno viskozimetru se naplní kapalinou až po plnicí rysku. Hladiny v ramenech tedy nejsou ve stejné výšce a kapalina není v rovnováze (je hnána vlastním hydrostatickým tlakem). Po uvolnění zátky je kapalině umožněno tečení, kapalina protéká skrz kapiláru. Měřen je čas, za který kapilárou proteče určitý objem kapaliny. Dle Hagenova-Poiseullova zákona (\ref{eq:Hagen_Poiseull}), respektive dle převodního vztahu kapilárních viskozimetrů (\ref{eq:kapilarni_viskozimetr}) lze z tohoto času spočítat viskozitu. Přístrojová konstanta je zjišťována výrobce a nejčastěji uvedena na těle přístroje. Viskozimetr by měl být po celou dobu měření ponořen ve vodní lázni.
+Kapilární viskozimetry se vyrábí ze skla a mají tvar U-trubice. Část U-trubice (kapilára) je zúžena na přesně kalibrovaný průměr. Jedno rameno viskozimetru se naplní kapalinou až po plnicí rysku. Hladiny v~ramenech tedy nejsou ve stejné výšce a kapalina není v~rovnováze (je hnána vlastním hydrostatickým tlakem). Po uvolnění zátky je kapalině umožněno tečení, kapalina protéká skrz kapiláru. Měřen je čas, za který kapilárou proteče určitý objem kapaliny. Dle Hagenova-Poiseullova zákona (\ref{eq:Hagen_Poiseull}), respektive dle převodního vztahu kapilárních viskozimetrů (\ref{eq:kapilarni_viskozimetr}) lze z~tohoto času spočítat viskozitu. Přístrojová konstanta je zjišťována výrobcem a nejčastěji uvedena na těle přístroje. Viskozimetr by měl být po celou dobu měření ponořen ve vodní lázni.
 \par
-Podle toho, zda kapalina během tečení teče do nebo z měřicí baňky rozlišujeme viskozimetry \glqq pro neprůhledné kapaliny\grqq\space(někdy též nazývané \emph{zpětné viskozimetry}) a \glqq pro průhledné kapaliny\grqq.~\cite{book:Calibration_of_viscometers} To proto, že pokud by se neprůhledná kapalina (jako třeba čokoláda) měřila vytékáním z měřicí baňky, smočila by nejdříve její stěny a nebylo by vidět, že kapalina již vytekla. Neprůhlednou kapalinu lze tedy měřit pouze tak, že do baňky vtéká.
+Podle toho, zda kapalina během tečení teče do nebo z~měřicí baňky rozlišujeme viskozimetry \glqq pro neprůhledné kapaliny\grqq\space(někdy též nazývané \emph{zpětné viskozimetry}) a \glqq pro průhledné kapaliny\grqq.~\cite{book:Calibration_of_viscometers} To proto, že pokud by se neprůhledná kapalina (jako třeba čokoláda) měřila vytékáním z~měřicí baňky, smočila by nejdříve její stěny a nebylo by vidět, že kapalina již vytekla. Neprůhlednou kapalinu lze tedy měřit pouze tak, že do baňky vtéká.
 \par
-Konstrukcí kapilárních viskozimetrů existuje celá řada. Nejrozšířenějším typem kapilárního viskozimetru pro průhledné kapaliny je \emph{viskozimetr dle Ubbelohdeho}. Dalším často používaným typem je, pro jednoduchost svého provedení, \emph{viskozimetr dle Ostwalda}, ať už v provedení pro průhledné nebo neprůhledné kapaliny. Nákresy těchto typů viskozimetrů jsou na obrázku \ref{fig:viskozimetry}. Použití jednotlivých typů viskozimetrů bude popsáno níže.
+Konstrukcí kapilárních viskozimetrů existuje celá řada. Nejrozšířenějším typem kapilárního viskozimetru pro průhledné kapaliny je \emph{viskozimetr dle Ubbelohdeho}. Dalším často používaným typem je, pro jednoduchost svého provedení, \emph{viskozimetr dle Ostwalda}, ať už v~provedení pro průhledné nebo neprůhledné kapaliny. Nákresy těchto typů viskozimetrů jsou na obrázku~\ref{fig:viskozimetry}. Použití jednotlivých typů viskozimetrů bude popsáno níže.
 
 \begin{figure}
     \begin{subfigure}[b]{.3\textwidth}
@@ -795,25 +799,26 @@ Konstrukcí kapilárních viskozimetrů existuje celá řada. Nejrozšířeněj�
 \end{figure} %Viskozimetry
 
 \paragraph{Ostwaldův viskozimetr pro průhledné kapaliny:}
-Tento viskozimetr je znázorněn na obrázku \ref{sfig:Ostwald_normalni}, jednotlivé části přístroje budou popisovány písmeny z tohoto obrázku. Viskozimetr je umístěn (ideálně ve vodní lázni) do stojanu a je ověřena jeho svislá poloha. Měřená kapalina je do přístroje umístěna pomocí pipety plnicí trubicí (Y) tak, aby její hladina v zásobní nádobě (A) po ustálení byla v úrovni plnicí rysky (G). Po ustálení hladin a teploty je na měřicí trubici (X) nasazen pipetovací balónek a kapalina vysáta tak, aby její hladina v měřicí trubici (X) přesáhla měřicí rysku (E) o přibližně \SI{5}{\milli\metre}.\footnotemark{} Plnicí trubice (Y) může být zazátkována. Následně je pipetovací balónek odstraněn (to platí i pro případnou zátku): kapalina v tento okamžik začíná téct. Měření času je započato v momentě, kdy meniskus kapaliny v meřící trubici (X) projde první měřicí ryskou (E) a ukončeno v momentě, kdy meniskus projde druhou měřicí ryskou (F).~\cite{book:Calibration_of_viscometers}
+Tento viskozimetr je znázorněn na obrázku \ref{sfig:Ostwald_normalni}, jednotlivé části přístroje budou popisovány písmeny z~tohoto obrázku. Viskozimetr je umístěn (ideálně ve vodní lázni) do stojanu a je ověřena jeho svislá poloha. Měřená kapalina je do přístroje umístěna pomocí pipety plnicí trubicí (Y) tak, aby její hladina v zásobní nádobě (A) po ustálení byla v~úrovni plnicí rysky (G). Po ustálení hladin a teploty je na měřicí trubici (X) nasazen pipetovací balónek a kapalina vysáta tak, aby její hladina v~měřicí trubici (X) přesáhla měřicí rysku (E) o přibližně \SI{5}{\milli\metre}.\footnotemark Plnicí trubice (Y) může být zazátkována. Následně je pipetovací balónek odstraněn (to platí i pro případnou zátku): kapalina v~tento okamžik začíná téct. Měření času je započato v~momentě, kdy meniskus kapaliny v~měřící trubici (X) projde první měřicí ryskou (E) a ukončeno v~momentě, kdy meniskus projde druhou měřicí ryskou (F).~\cite{book:Calibration_of_viscometers}
 \footnotetext{Tato metoda sání kapaliny není vhodná pro těkavé látky. Pro těkavé látky je lepší nasadit pipetovací balónek na plnicí trubici (Y) a kapalinu nad měřicí rysku (E) vytlačit přetlakem.}
 
 \paragraph{Ostwaldův viskozimetr pro neprůhledné kapaliny:}
-Tento viskozimetr je znázorněn na obrázku \ref{sfig:Ostwald_zpetny}, jednotlivé části přístroje budou popisovány písmeny z tohoto obrázku. Viskozimetr je umístěn (ideálně ve vodní lázni) do stojanu a je ověřena jeho svislá poloha. Měřená kapalina je vlita do zásobní nádoby (X) tak, aby se meniskus hladiny dostal na plnicí rysku (I). Poté je měřicí trubice (Y) uzavřena zátkou. Následně je do zásobní nádoby (X) dolit zbytek kapaliny tak, aby se hladina kapaliny v zásobní nádobě (X) dostala na úroveň plnicí rysky (H). Po ustálení teploty je zátky z měřicí trubice (Y) odstraněna: kapalina začíná téct. Měření času je započato v momentě, kdy meniskus kapaliny v měřicí trubici (Y) projde první měřicí ryskou (E) a ukončeno v momentě, kdy meniskus projde druhou měřicí ryskou (F).~\cite{book:Calibration_of_viscometers}
+Tento viskozimetr je znázorněn na obrázku~\ref{sfig:Ostwald_zpetny}, jednotlivé části přístroje budou popisovány písmeny z~tohoto obrázku. Viskozimetr je umístěn (ideálně ve vodní lázni) do stojanu a je ověřena jeho svislá poloha. Měřená kapalina je vlita do zásobní nádoby (X) tak, aby se meniskus hladiny dostal na plnicí rysku (I). Poté je měřicí trubice (Y) uzavřena zátkou. Následně je do zásobní nádoby (X) dolit zbytek kapaliny tak, aby se hladina kapaliny v~zásobní nádobě (X) dostala na úroveň plnicí rysky (H). Po ustálení teploty je zátky z měřicí trubice (Y) odstraněna: kapalina začíná téct. Měření času je započato v~momentě, kdy meniskus kapaliny v~měřicí trubici (Y) projde první měřicí ryskou (E) a ukončeno v~momentě, kdy meniskus projde druhou měřicí ryskou (F).~\cite{book:Calibration_of_viscometers}
 
-\paragraph{Ubbelohdeho viskozimetr:} Tento viskozimetr je znázorněn na obrázku \ref{sfig:Ubbelohde}, jednotlivé části přístroje budou popisovány písmeny z tohoto obrázku. Hlavní odlišností tohoto typu viskozimetru od viskozimetru dle Ostwalda je ten, že během měření dojde k přetržení kapalinového sloupce. Zároveň má trubici (M), která slouží k vyrovnání tlaků pod a nad kapilárou. Tyto dva aspekty zajišťují výhodu Ubbelohdeho viskozimetru: rozdíl tlaku nezávisí na naplnění zásobní nádoby (A) a přesné naplnění viskozimetru tím pádem neovlivňuje výsledky měření.~\cite{wiki:Ubbelohde_viscometer} Samotné měření pak probíhá takto: měřená kapalina je nalita plnicí trubicí (Y) do zásobní nádoby (A) tak, aby se hladina kapaliny po ustálení nacházela mezi plnicími ryskami (G) a (H). Poté je vyrovnávací trubice (M) ucpána zátkou nebo prstem, na měřicí trubici (X) je nasazen pipetovací balónek a měřená kapalina je do měřicí trubice (X) vysáta tak, aby meniskus její hladiny přesahoval měřicí rysku (E) o zhruba \SI{5}{\milli\metre}. Otvor vyrovnávací trubice (M) je uvolněn. Následně je odstraněn pipetovací balónek (případně jiný zdroj sání) z měřicí trubice (X): kapalina začíná téct. Měření času je započato v momentě, kdy meniskus kapaliny v měřicí trubici (X) projde první měřicí ryskou (E) a ukončeno v momentě, kdy meniskus projde druhou měřicí ryskou (F).~\cite{book:Calibration_of_viscometers}
+\paragraph{Ubbelohdeho viskozimetr:} Tento viskozimetr je znázorněn na obrázku \ref{sfig:Ubbelohde}, jednotlivé části přístroje budou popisovány písmeny z~tohoto obrázku. Hlavní odlišností tohoto typu viskozimetru od viskozimetru dle Ostwalda je ten, že během měření dojde k~přetržení kapalinového sloupce. Zároveň má trubici (M), která slouží k~vyrovnání tlaků pod a nad kapilárou. Tyto dva aspekty zajišťují výhodu Ubbelohdeho viskozimetru: rozdíl tlaku nezávisí na naplnění zásobní nádoby (A) a přesnost naplnění viskozimetru tím pádem neovlivňuje výsledky měření.~\cite{wiki:Ubbelohde_viscometer} Samotné měření pak probíhá takto: měřená kapalina je nalita plnicí trubicí (Y) do zásobní nádoby (A) tak, aby se hladina kapaliny po ustálení nacházela mezi plnicími ryskami (G) a (H). Poté je vyrovnávací trubice (M) ucpána zátkou nebo prstem, na měřicí trubici (X) je nasazen pipetovací balónek a měřená kapalina je do měřicí trubice (X) vysáta tak, aby meniskus její hladiny přesahoval měřicí rysku (E) o zhruba \SI{5}{\milli\metre}. Otvor vyrovnávací trubice (M) je uvolněn. Následně je odstraněn pipetovací balónek (případně jiný zdroj sání) z měřicí trubice (X): kapalina začíná téct. Měření času je započato v momentě, kdy meniskus kapaliny v~měřicí trubici (X) projde první měřicí ryskou (E) a ukončeno v~momentě, kdy meniskus projde druhou měřicí ryskou (F).~\cite{book:Calibration_of_viscometers}
 
-\subsection{Nálevkové viskozimetry}
+\subsection{Nálevkové viskozimetry}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Nálevkové viskozimetry pracují, stejně jako kapilární viskozimetry, na principu měření času. V~zásadě se tedy také řídí Hagenovým-Poiseulleovým zákonem, který byl popsán na straně \pageref{sec:tečení_trubicí} a následujících. Viskozimetr se sestává z nádoby (většinou ve tvaru kelímku nebo nálevky), která má ze spodní strany otvor o přesně stanoveném průměru. Nádoba se ponoří do měřené kapaliny, počká se, až se zcela naplní měřenou kapalinou, poté se z kapaliny vyjme a měří se čas, za který kapalina z nádoby vyteče (tj. až do prvního přerušení proudu). Tento čas lze pomocí vztahu podobnému tomu, který platí pro kapilární viskozimetry (str. \pageref{eq:kapilarni_viskozimetr}), přepočítat na kinematickou viskozitu měřené kapaliny. Výpočetní vztahy se mění v závislosti na viskozimetru a většinou je stanovuje výrobce. Obecně platí vztah:~\cite{Article:Rapid_and_economic_chocolate_viscosity}
+Nálevkové viskozimetry pracují, stejně jako kapilární viskozimetry, na principu měření času. V~zásadě se tedy také řídí Hagenovým-Poiseulleovým zákonem, který byl popsán na straně~\pageref{sec:tečení_trubicí} a následujících. Viskozimetr se sestává z~nádoby (většinou ve tvaru kelímku nebo nálevky), která má ze spodní strany otvor o přesně stanoveném průměru. Nádoba se ponoří do měřené kapaliny, počká se, až se zcela naplní měřenou kapalinou, poté se z~kapaliny vyjme a měří se čas, za který kapalina z~nádoby vyteče (tj.~až do prvního přerušení proudu). Tento čas lze pomocí vztahu podobnému tomu, který platí pro kapilární viskozimetry (str.~\pageref{eq:kapilarni_viskozimetr}), přepočítat na kinematickou viskozitu měřené kapaliny. Výpočetní vztahy se mění v~závislosti na viskozimetru a většinou je stanovuje výrobce. Obecně platí vztah:~\cite{Article:Rapid_and_economic_chocolate_viscosity}
 \begin{equation}
     \nu = K(t-c)\text{,}
 \end{equation}
-kde $\nu$ je kinematická viskozita měřené kapaliny, $t$ je čas průtoku nálevkovým viskozimetrem a $K$ a $c$ jsou přístrojové konstanty.
+kde $\nu$ je kinematická viskozita měřené kapaliny, $t$ je čas průtoku nálevkovým viskozimetrem a $K$ a $c$ jsou přístrojové konstanty (určené výrobcem).
 \par\noindent
 Konstrukcí nálevkových viskozimetrů existuje celá řada. Liší se většinou tvarem, některé se také neplní ponořením. Některé konstrukce nálevkových viskozimetrů si čtenář může prohlédnout na obrázku \ref{fig:nalevkove_viskozimetry}.
 \par\noindent
-Zásadní nevýhody tohoto typu viskozimetru jsou chybějící tepelná regulace a fakt, že hydrostatický tlak se v průběhu měření z důvodu vytékání kapaliny postupně mění. Jsou tedy oproti ostatním druhům viskozimetrů méně přesné. Jejich výhodou je nízká cena, dobrá dostupnost, jednoduché a časově nenáročné použití.
+Zásadní nevýhody tohoto typu viskozimetru jsou chybějící tepelná regulace a fakt, že hydrostatický tlak se v~průběhu měření z~důvodu vytékání kapaliny postupně mění. Jsou tedy oproti ostatním druhům viskozimetrů méně přesné. Jejich výhodou je nízká cena, dobrá dostupnost, jednoduché a časově nenáročné použití.
+
 \begin{figure}
     \begin{subfigure}[b]{.3\textwidth}
         \includegraphics[width = \linewidth]{figures/zahn cup viscometer.jpg}
@@ -833,18 +838,18 @@ Zásadní nevýhody tohoto typu viskozimetru jsou chybějící tepelná regulace
     \label{fig:nalevkove_viskozimetry}
 \end{figure}
 
-
-\subsection{Tělískové viskozimetry}
+\subsection{Tělískové viskozimetry}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Tělískové viskozimetry pracují na principu měření rychlosti, kterou je těleso schopno pohybovat se kapalinou, pokud je hnáno silou známé velikosti. Hnací silou ne nejčastěji síla tíhová, takové viskozimetry se pak nazývají \emph{pádové}. Nejčastěji používanými tělísky jsou tělíska kulového tvaru (viskozimetry používající kulová tělíska se pak nazývají \emph{kuličkové}).\footnotemark Rychlost pohybu (pádu) tělíska je zjišťována pomocí měření času, za který tělísko propadne mezi dvěma hladinami, jejichž vzdálenost je známá. Teoretický princip fungování pádového kuličkového viskozimetru bude popsán níže.
 \footnotetext{Dalším oblíbeným tvarem tělíska je válcový píst.}
 
-\subsubsection{Teoretické poznatky, Stokesův zákon}
+\subsubsection{Teoretické poznatky, Stokesův zákon}%%%%%%%%%%%%%%%%%%%
+
 Představme si kouli, která rovnoměrně padá kapalinou. Výslednice všech sil působících na takovou kouli musí být nulová. Síly, které na kouli působí, jsou:
 \begin{itemize}[noitemsep, topsep = 0pt]
     \item \underline{Tíhová síla} $\vec{F}_g$, působící dolů,
     \item \underline{Vztlaková síla} $\vec{F}_{vz}$, působící nahoru, a
-    \item \underline{Odporová síla} $\vec{F}_\eta$, působící proti směru pohybu, tj. nahoru.\footnote{Při měření viskozity velmi hustých kapalin se může stát, že vztlaková síla přesáhne sílu tíhovou. Tělísko se pak pohybuje směrem vzhůru a ve všech vztazích níže je pak nutné počítat se zápornou pádovou rychlostí $v$.}
+    \item \underline{\smash{Odporová síla}} $\vec{F}_\eta$, působící proti směru pohybu, tj.~nahoru.\footnote{Při měření viskozity velmi hustých kapalin se může stát, že vztlaková síla přesáhne sílu tíhovou. Tělísko se pak pohybuje směrem vzhůru a ve všech vztazích níže je pak nutné počítat se zápornou pádovou rychlostí $v$.}
 \end{itemize}
 Platí tedy:
 \begin{equation}
@@ -861,12 +866,12 @@ Víme, že:
         F_{vz} &= V\rho g\text{,}
     \end{split}
 \end{align}
-kde $m$ je hmotnost koule, $V$ je objem vytlačené kapaliny, zde tedy objem koule, $\rho$ je hustota kapaliny a $g$ je tíhové zrychlení. Pro velikost odporové síly $F_\eta$ platí tzv. \emph{Stokesův zákon}:~\cite{book:Calibration_of_viscometers}\cite{wiki:Stokes_law}
+kde $m$ je hmotnost koule, $V$ je objem vytlačené kapaliny, zde tedy objem koule, $\rho$ je hustota kapaliny a $g$ je tíhové zrychlení. Pro velikost odporové síly $F_\eta$ platí tzv.~\emph{Stokesův zákon}:~\cite{book:Calibration_of_viscometers}\cite{wiki:Stokes_law}
 \begin{equation}
     F_\eta = 6\pi r\eta v\text{,}
 \end{equation}
 kde $r$ je poloměr koule, $\eta$ je dynamická viskozita tekutiny a $v$ je rychlost pohybu koule skrz kapalinu.\footnotemark Dohromady tedy platí:
-\footnotetext{Tento zákon platí pouze pro malá Reynoldsova čísla, tj. pro laminární obtékání koule a malé rychlosti.}
+\footnotetext{Tento zákon platí pouze pro malá Reynoldsova čísla, tj.~pro laminární obtékání koule a malé rychlosti.}
 \begin{equation}
     mg = V\rho g + 6\pi r\eta v\text{.}
 \end{equation}
@@ -885,14 +890,13 @@ a pokud $v = \frac{\Delta h}{t}$, kde $\Delta h$ je dráha, kterou padající ko
 \end{equation}
 kde čas $t$ je jediná proměnná (a tedy měřená) veličina.
 
+\subsubsection{Konstrukce a použití}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Konstrukce a použití}
-
-Konstrukcí, které využívají výše uvedený princip, je celá řada. Existují komerčně prodávané kuličkové viskozimetry, většinou si však každý konkrétní výzkum upraví aparaturu dle vlastních potřeb. Hrubou představu o konstrukci kuličkového viskozimetru si může čtenář udělat z obrázku \ref{fig:kuličkový_viskozimetr}.
+Konstrukcí, které využívají výše uvedený princip, je celá řada. Existují komerčně prodávané kuličkové viskozimetry, většinou si však každý konkrétní výzkum upraví aparaturu dle vlastních potřeb. Hrubou představu o konstrukci kuličkového viskozimetru si může čtenář udělat z~obrázku \ref{fig:kuličkový_viskozimetr}.
 \par\noindent
-Viskozimetr takový tvoří samozřejmě skleněná trubice, do které je obsluhou přístroje vhazováno kulové tělísko. Měřicí trubice je umístěna ve vodní lázni, aby bylo možné regulovat teplotu měřené kapaliny. Teplota lázně je kontrolována teploměrem. Na měřicí trubici bývají vyznačeny rysky: měřen je čas mezi průchodem tělíska první a druhou ryskou. K výpočtu viskozity je pak použit vztah \ref{eq:kulickovy_viskozimetr} s tím, že v reálných případech musí být připočten korekční faktor (válec, ve kterém se tělísko pohybuje, není nekonečně široký, a obtékání tělíska je tedy oproti Stokesovu zákonu ovlivňováno).
+Viskozimetr jako takový tvoří skleněná trubice, do které je obsluhou přístroje vhazováno kulové tělísko. Měřicí trubice je umístěna ve vodní lázni, aby bylo možné regulovat teplotu měřené kapaliny. Teplota lázně je kontrolována teploměrem. Na měřicí trubici bývají vyznačeny rysky: měřen je čas mezi průchodem tělíska první a druhou ryskou. K výpočtu viskozity je pak použit vztah \ref{eq:kulickovy_viskozimetr} s~tím, že v~reálných případech musí být připočten korekční faktor (válec, ve kterém se tělísko pohybuje, není nekonečně široký, a obtékání tělíska je tedy oproti Stokesovu zákonu ovlivňováno).
 \par\noindent
-Je evidentní, že tělískový viskozimetr takovéto konstrukce je použitelný pouze pro průhledné kapaliny. Pro neprůhledné kapaliny se konstruují viskozimetry, které detekují pohyb tělíska pomocí cívek umístěných okolo přístroje.~\cite{thesis:vysokotlaky_viskozimetr}
+Je evidentní, že tělískový viskozimetr takovéto konstrukce je použitelný pouze pro průhledné kapaliny. Pro neprůhledné kapaliny se konstruují viskozimetry, které detekují pohyb tělíska pomocí cívek umístěných okolo přístroje nebo jiným technicky náročným způsobem.~\cite{thesis:vysokotlaky_viskozimetr}
 \begin{figure}
     \centering
     \includegraphics[width = 0.75\linewidth]{figures/kuličkový viskozimetr.jpg}
@@ -900,15 +904,17 @@ Je evidentní, že tělískový viskozimetr takovéto konstrukce je použitelný
     \label{fig:kuličkový_viskozimetr}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Rotační viskozimetry}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Rotační viskozimetry}
-
-Všechny výše popsané měřící metody jsou vhodné pouze k měření viskozity newtonovských kapalin, jelikož není možné zjistit, při jakém tečném napětí nebo rychlosti deformace měření probíhá. Tento problém je řešitelný konstrukcí rotačního viskozimetru.
+Všechny výše popsané měřící metody jsou vhodné pouze k~měření viskozity newtonovských kapalin, jelikož není možné zjistit, při jakém tečném napětí nebo rychlosti deformace měření probíhá. Tento problém je řešitelný konstrukcí rotačního viskozimetru.
 \par\noindent
-Rotační viskozimetry, podobně jako tělískové viskozimetry, měří odpor kladený tělesu, které se pohybuje v kapalině. Konkrétně je do kapaliny umístěno těleso, které se otáčí kolem své osy, a je měřen moment síly, kterým musí být na těleso působeno, aby v tomto otáčivém pohybu setrvalo. Tato rotační tělesa mají většinou tvar válce a nazývají se \emph{měřicí vřetena}.
+Rotační viskozimetry, podobně jako tělískové viskozimetry, měří odpor kladený tělesu, které se pohybuje v~kapalině. Konkrétně je do kapaliny umístěno těleso, které se otáčí kolem své osy, a je měřen moment síly, kterým musí být na těleso působeno, aby v~tomto otáčivém pohybu setrvalo. Tato rotační tělesa mají většinou tvar válce a nazývají se \emph{měřicí vřetena}.
 
-\subsubsection{Teoretické poznatky}
-Uvažujme válcovou nádobu o poloměru $R$, která je naplněna kapalinou. Dále uvažujme válec o poloměru $R_v$ a výšce $h$, který je ponořený v této kapalině s tím, že jeho osa je kolmá na hladinu kapaliny a je tedy totožná s osou nádoby. Konečně uvažujme, že tento válec se kolem své osy otáčí úhlovou rychlostí $\Omega$. Kapalina přiléhající k plášti válce se bude otáčet spolu s válcem rychlostí $\Omega$, kapalina přiléhající ke stěně nádoby se nebude pohybovat vůbec. Existuje zde tedy gradient úhlové rychlosti kapaliny $\frac{\dd\omega}{\dd r}$, jelikož $\omega(R_v) = \Omega$ a $\omega(R) = 0$.\label{eq:Uhlova_rychlost} Z Newtonova zákona viskozity (vztah \ref{eq:Newtonův zákon viskozity}, str. \pageref{eq:Newtonův zákon viskozity}) víme, že $\tau = \eta\dot\gamma$. Gradient rychlosti $\frac{\dd v}{\dd r}$ lze získat vztahem (viz str. \pageref{eq:gamma_gradient}):
+\subsubsection{Teoretické poznatky}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Uvažujme válcovou nádobu o poloměru $R$, která je naplněna kapalinou. Dále uvažujme válec o poloměru $R_v$ a výšce $h$, který je ponořený v~této kapalině s~tím, že jeho osa je kolmá na hladinu kapaliny a je tedy totožná s osou nádoby. Konečně uvažujme, že tento válec se kolem své osy otáčí úhlovou rychlostí $\Omega$. Kapalina přiléhající k~plášti válce se bude otáčet spolu s~válcem rychlostí $\Omega$, kapalina přiléhající ke stěně nádoby se nebude pohybovat vůbec. Existuje zde tedy gradient úhlové rychlosti kapaliny $\frac{\dd\omega}{\dd r}$, jelikož $\omega(R_v) = \Omega$ a $\omega(R) = 0$.\label{eq:Uhlova_rychlost} Z~Newtonova zákona viskozity (vztah~\ref{eq:Newtonův zákon viskozity}, str.~\pageref{eq:Newtonův zákon viskozity}) víme, že $\tau = \eta\dot\gamma$. Gradient rychlosti $\frac{\dd v}{\dd r}$ lze získat vztahem (viz str.~\pageref{eq:gamma_gradient}):
 \begin{equation}
     \dot\gamma = -\frac{\dd v}{\dd r} = -r\frac{\dd\omega}{\dd r}\text{.}
 \end{equation}
@@ -916,24 +922,33 @@ Platí tedy, že smykové napětí působící na plášť válce o poloměru $r
 \begin{equation}
     \tau = -\eta r\frac{\dd\omega}{\dd r}\text{.}
 \end{equation}
-Podobně jako v kapitole o kapilárních viskozimetrech (str. \pageref{eq:gamma_gradient}) i zde budeme uvažovat, že kapalina je ve skutečnosti tvořena nekonečným množstvím nekonečně tenkých válců. Situace je tedy podobná jako na obr. \ref{fig:valce}, ale osa válců je svislá (kolmá na hladinu kapaliny).
-Ze vztahu \ref{eq:hook_smyk} zároveň víme, že $\tau = \frac{F}{S'}$. Plochu $S'$ zde tvoří plášť válce, takže platí $S' = 2\pi rh$. Dohromady platí:
+Podobně jako v~kapitole o kapilárních viskozimetrech (str.~\pageref{eq:gamma_gradient}), i zde budeme uvažovat, že kapalina je ve skutečnosti tvořena nekonečným množstvím nekonečně tenkých válců. Situace je tedy podobná jako na obr.~\ref{fig:valce}, ale osa válců je svislá (kolmá na hladinu kapaliny).
+Ze vztahu~\ref{eq:hook_smyk} zároveň víme, že $\tau = \frac{F}{S'}$. Plochu $S'$ zde tvoří plášť válce, takže platí $S' = 2\pi rh$. Dohromady platí:
 \begin{equation}
     \frac{F}{2\pi rh} = -\eta r\frac{\dd\omega}{\dd r}\text{.}
 \end{equation}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.6\linewidth]{figures/brookfield.png}
+    \caption{Schéma jedné konkrétní (poměrně komplikované) konstrukce viskozimetru dle Brookfielda.~\cite{Figure:Brookfield}}
+    \label{fig:brookfield}
+\end{figure}
+
 Síla $F$ působící na plášť infinitezimálního válce má tedy velikost:~\cite{book:Calibration_of_viscometers}
 \begin{equation}
-    F = -2\pi r^2h\eta\frac{\dd \omega}{\dd r}
+    F = -2\pi r^2h\eta\frac{\dd \omega}{\dd r}\text{.}
 \end{equation}
 Pro moment síly platí $M = F\cdot d$, kde $F$ je síla a $d$ je rameno síly. Rameno síly je zde rovno poloměru infinitezimálního válce, a pro moment síly $\dd M$ působící na něj tedy platí:
 \begin{equation}
-    \dd M = -2\pi r^3h\eta\frac{\dd \omega}{\dd r}
+    \dd M = -2\pi r^3h\eta\frac{\dd \omega}{\dd r}\text{.}
 \end{equation}
-Moment působící na skutečný ponořený válec je pak součtem všech těchto malých momentů $\dd M$. Integrováním vzhledem k $r$ získáváme:~\cite{book:Calibration_of_viscometers}\cite{Article:barr}
+Moment působící na skutečný ponořený válec je pak součtem všech těchto malých momentů $\dd M$. Integrováním vzhledem k~$r$ získáváme:\footnotemark~\cite{book:Calibration_of_viscometers}\cite{Article:barr}
 \begin{equation}
     M = 4\pi h\eta\Omega\frac{R^2R_v^2}{R^2-R_v^2}\text{.}
     \label{eq:moment_viskozimetr}
 \end{equation}
+\footnotetext{Samotnému mi princip této integrace není plně objasněn. Při pokusném integrování na papíře jsem dospěl k~jinému výsledku. Vyzývám tedy čtenáře, aby se o integraci pokusil sám: možná dospěje k~rozumnému závěru.}
 Rychlost deformace ve vzdálenosti $r$ od osy válce lze spočítat vztahem:~\cite{material:brookfield_viscometers}
 \begin{equation}
     \dot\gamma(r) = \frac{2\Omega R^2R_v^2}{r^2(R^2-R_v^2)}\text{.}
@@ -975,29 +990,22 @@ Pro moment $M$ tedy platí:
     M = -2\pi h\eta\int_{R_v}^Rr^3\frac{\dd \omega}{\dd r}\dd r = -2\pi h\eta\Omega\cdot\left(\frac{2R_vR^4(R_v + R) - R_v^5(3R_v + 2R) + R_v^4R^2}{4(R_v^2 - R^2)}\right)
 \end{equation}
 \end{comment}
-\begin{figure}
-    \centering
-    \includegraphics[width = 0.6\linewidth]{figures/brookfield.png}
-    \caption{Schéma jedné konkrétní (poměrně komplikované) konstrukce viskozimetru dle Brookfielda.~\cite{Figure:Brookfield}}
-    \label{fig:brookfield}
-\end{figure}
+
 \subsubsection{Konstrukce a použití}
 
-Stejně jako u všech ostatních druhů viskozimetrů, i rotačních viskozimetrů existuje několik konstrukcí. Mezi vynálezci jedné z nich uveďme např. Maurice Couetta, jehož jméno už v této práci zaznělo.~\cite{wiki:Maurice_Couette} Nás však budou zajímat viskozimetry dle Brookfielda, jelikož viskozimetr této konstrukce bude později v této práci použit k měření viskozity čokolády.
+Stejně jako u všech ostatních druhů viskozimetrů, i rotačních viskozimetrů existuje několik konstrukcí. Mezi vynálezci jedné z~nich uveďme např.~Maurice Couetta, jehož jméno už v~této práci zaznělo.~\cite{wiki:Maurice_Couette} Nás však budou zajímat viskozimetry dle Brookfielda, jelikož viskozimetr této konstrukce bude později v~této práci použit k~měření viskozity čokolády.
 \par\noindent
-Rotační viskozimetr dle Brookfielda využívá k měření viskozity měřicí vřeteno válcového tvaru, které rotuje kolem své osy symetrie a jehož osa rotace je totožná s osou nádoby, ve se nachází měřená kapalina. Přístroj měří moment síly, který je nutný k udržení válce v rovnoměrném otáčivém pohybu, vyjádřený vztahem \ref{eq:moment_viskozimetr}.
+Rotační viskozimetr dle Brookfielda využívá k~měření viskozity měřicí vřeteno válcového tvaru, které rotuje kolem své osy symetrie a jehož osa rotace je totožná s~osou nádoby, ve které se nachází měřená kapalina. Přístroj měří moment síly, který je nutný k~udržení válce v~rovnoměrném otáčivém pohybu, vyjádřený vztahem~\ref{eq:moment_viskozimetr}.
 \par\noindent
-Měřicí vřeteno je poháněno motorem v přístroji. Vřeteno však není spojeno s motorem přímo: motor je spojen s ručkou přístroje, kterou tímto vychyluje. Ručka přístroje je s měřicím vřetenem spojena pomocí spirálové pružiny. Velikost deformace pružiny je pak přímo úměrná momentu síly.~\cite{man:brookfield} Diagram poměrně složité konstrukce viskozimetru dle Brookfielda je na obrázku \ref{fig:brookfield}.
-
+Měřicí vřeteno je poháněno motorem v~přístroji. Vřeteno však není spojeno s~motorem přímo: motor je spojen s~ručkou přístroje, kterou vychyluje. Ručka přístroje je s~měřicím vřetenem spojena pomocí spirálové pružiny. Velikost deformace pružiny je pak přímo úměrná momentu síly.~\cite{man:brookfield} Diagram poměrně složité konstrukce viskozimetru dle Brookfielda je na obrázku \ref{fig:brookfield}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Čokoláda}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
-\section{Čokoláda}
-
-%\subsection{Obecně}
-
-Čokoláda je oblíbená pochutina vyráběná ze semen kakaovníku (\emph{Theobroma cacao}, což mimochodem v překladu znamená \emph{potrava bohů}).~\cite{wiki:Kakao} Vyrábí se z ní celá řada dalších produktů.
+Čokoláda je oblíbená pochutina vyráběná ze semen kakaovníku (\emph{Theobroma cacao}, což mimochodem v~překladu znamená \emph{potrava bohů}).~\cite{wiki:Kakao} Vyrábí se z~ní celá řada dalších produktů.
 
 \subsection{Složení čokolády}
 
@@ -1035,7 +1043,7 @@ Tento model je schopen popsat jak plastické tak pseudoplastické vlastnosti kap
 a tento model tedy ani při vysokých hodnotách tečného napětí nemůže vyjadřovat lineární tokovou křivku. Je proto nutné vymyslet kompromisní model, který zachytí všechny tři důležité reologické vlastnosti čokolády, které byly popsány v úvodu této podkapitoly:
 \begin{itemize}[noitemsep, topsep = 0pt]
     \item \underline{Plasticitu}, tedy tuhost čokolády při nízkých smykových napětích (a tedy existenci prahového napětí $\tau_0$),
-    \item \underline{Pseudoplasticitu} čokolády (tj. nelinearitu její tokové křivky) při středních hodnotách smykových napětí, a
+    \item \underline{\smash{Pseudoplasticitu}} čokolády (tj. nelinearitu její tokové křivky) při středních hodnotách smykových napětí, a
     \item \underline{Newtonovské chování} čokolády (tj. linearitu její tokové křivky) při vysokých tečných napětích.
 \end{itemize}
 
@@ -1115,13 +1123,13 @@ kde $\eta(t)$ je zdánlivá viskozita při teplotě $t$ [\SI{}{\degreeCelsius}] 
 
 K měření viskozity čokolády byly zpočátku uvažovány všechny výše zmíněné metody. Za účelem výběru jedné z nich byly měřicí metody vyzkoušeny. O metodice tohoto testování pojednává tato kapitola.
 \subsection{Kapilární viskozimetr}
-\noindent \underline{Pomůcky}: kapilární viskozimetr, vhodný stojan, stopky, případně kamera
+\noindent \underline{\smash{Pomůcky}}: kapilární viskozimetr, vhodný stojan, stopky, případně kamera
 \par
 \noindent \underline{Provedení}: Za účelem otestování vhodnosti použití kapilárního viskozimetru byl pořízen zpětný kapilární viskozimetr dle Ostwalda s~přístrojovou konstantou $k = 0,3$, jehož fotografie je možné si prohlédnout na obrázku \ref{fig:muj_ostwald} v příloze.  Pro výpočet viskozity platí jednoduchý vztah $\nu=kt$, popsaný na straně \pageref{eq:kapilarni_viskozimetr}, kde $\nu$ je kinematická viskozita měřené kapaliny v \SI{}{\milli\metre\squared\per\second}, $k$ je přístrojová konstanta a $t$ je čas mezi průchodem kapaliny první a druhou ryskou na přístroji v \SI{}{\second}.
 \par
 Viskozimetr byl naplněn vodou až po rysku na přístroji. Následně byla odstraněna zátka a prostor v kapiláře mezi dvěma měřicími ryskami byl nahráván mobilním telefonem se schopností zpomaleného záběru.
 \par
-\underline{Výsledky}: Nahrávka byla následně zanalyzována: meniskus hladiny prošel spodní ryskou na 628. a horní ryskou na 1135.~snímku nahrávky. Doba průtoku vody kapilárou byla tedy 507 snímků. Použitý mobilní telefon snímá zpomalený záběr se snímkovou frekvencí \SI{120}{\hertz}\footnotemark~\cite{rec:Samsung_A40}, naměřený čas $t$ průtoku kapaliny je tedy:
+\underline{\smash{Výsledky}}: Nahrávka byla následně zanalyzována: meniskus hladiny prošel spodní ryskou na 628. a horní ryskou na 1135.~snímku nahrávky. Doba průtoku vody kapilárou byla tedy 507 snímků. Použitý mobilní telefon snímá zpomalený záběr se snímkovou frekvencí \SI{120}{\hertz}\footnotemark~\cite{rec:Samsung_A40}, naměřený čas $t$ průtoku kapaliny je tedy:
 \begin{equation}
     \frac{507}{\SI{120}{\hertz}} = \SI{4,225}{\second}\text{.}
 \end{equation}
@@ -1137,11 +1145,11 @@ Měření kapilárním viskozimetrem se tedy ukázalo jako přesné. Vzhledem k 
 \footnotetext{Kapilární viskozimetry však samozřejmě existují v různých variantách, a lze s nimi tedy měřit kapaliny v širokém rozsahu viskozit (až do tisíců, desetitisíců nebo statisíců \SI{}{\milli\metre\squared\per\second}, podle typu viskozimetru).~\cite{book:Calibration_of_viscometers} Sehnat takový viskozimetr v rozumné době a za rozumné peníze jsem však považoval za nemožné.}
 
 \subsection{Tělískový (kuličkový) viskozimetr}
-\noindent \underline{Pomůcky}: kádinka, vodní lázeň, kovové kuličky
+\noindent \underline{\smash{Pomůcky}}: kádinka, vodní lázeň, kovové kuličky
 \par
 \noindent \underline{Provedení}: Za účelem otestování vhodnosti použití pádového viskozimetru byly pořízeny kulové neodymové magnety různých průměrů od \SI{5} do \SI{13}{\milli\metre}. Použitá tělíska jsou vyfotografována na obrázku \ref{fig:koule}. V~kádince bylo roztaveno \SI{200}{\gram} mléčné čokolády značky Milka. Následně byly magnety do roztavené čokolády postupně vhazovány, od nejmenších velikostí po největší.
 \par
-\underline{Výsledky}: Po vhození do čokolády se magnety, bez ohledu na jejich hmotnost/velikost, zastavily po kontaktu s hladinou. Žádný z magnetů nepropadl skrz čokoládu až na dno.
+\underline{\smash{Výsledky}}: Po vhození do čokolády se magnety, bez ohledu na jejich hmotnost/velikost, zastavily po kontaktu s hladinou. Žádný z magnetů nepropadl skrz čokoládu až na dno.
 \par
 \underline{Závěr}: Čokoláda je pro tuto měřicí metodu příliš viskózní. Jako pádové tělísko viskozimetru nelze použít kovové koule přiměřených velikostí.
 
@@ -1281,11 +1289,9 @@ Toto zapojení bylo vybráno z důvodu, že ztrátový výkon použitých rezist
 \par\noindent
 Schémata celkových zapojení aparatury v různých provedeních jsou na obrázcích \ref{fig:zapojeni_prvni} a \ref{fig:zapojeni_final}.
 
-
-
 \newpage
 \section{Průběh měření}
-\underline{Pomůcky}: Výše popsaná aparatura, třecí miska s~tloučkem (nebo jiné náčiní vhodné k~drcení čokolády), 
+\underline{\smash{Pomůcky}}: Výše popsaná aparatura, třecí miska s~tloučkem (nebo jiné náčiní vhodné k~drcení čokolády), 
 \par \underline{Průběh}: Vodní lázeň byla předehřátá na \SI{37}{\degreeCelsius}. Do misky s~tloučkem bylo vloženo \SI{100}{\gram} čokolády, která byla následně nadrcena. Většinou nebylo nutné čokoládu vážit \textendash \! \SI{100}{\gram} je standardní hmotnost jednoho balení. Malé množství drcené čokolády (okolo jedné čajové lžičky) bylo nasypáno do kovové kádinky, která byla vložena do lázně. Po částečném roztavení čokolády v kádince byla postupně přisypávána další čokoládová drť. Čokoládová tavenina byla po celou dobu míchána vhodným míchadlem. Po vložení celého vzorku do kádinky byla tavenina ponechána při teplotě \SI{37}{\degreeCelsius} ještě několik desítek minut a soustavně míchána, aby byla zajištěna teplotní homogenita a úplné roztavení čokolády, včetně rozbití vzniklých hrudek.
 \par
 Do této homogenní čokoládové taveniny bylo ponořeno měřicí vřeteno viskozimetru tak, aby jeho spodní část zůstala zhruba \SI{5}{\milli\metre} nad dnem kádinky. Samotné měření pak probíhalo následujícím způsobem:
@@ -1322,8 +1328,8 @@ Datový bod tvoří naměřená viskozita čokolády při určité naměřené t
 \subsection{Srovnávání dat naměřených dvěma různými vřeteny}
 Hodnoty viskozity čokolády naměřené dvěma různými vřeteny nejsou přímo srovnatelné, a to z těchto důvodů:
 \begin{itemize}[noitemsep, topsep = 0pt]
-    \item \underline{Různá hloubka ponoru vřetena}: Měřené množství čokolády (\SI{100}{\gram}) nestačí k úplnému ponoření měřicího vřetena č. 1 (viz tabulku vřeten, str. \pageref{tab:vretena}), vřeteno je v čokoládě ponořeno zhruba z poloviny. Naměřená viskozita tedy bude alespoň dvakrát menší, než její skutečná hodnota. 
-    \item \underline{Měření je prováděné při různých rychlostech deformace}: Vzhledem k tomu, že jednotlivá vřetena mají různé poloměry (opět viz tabulku vřeten, str. \pageref{tab:vretena}), bude měření různými vřeteny prováděno (dle vztahu \ref{eq:viskozimetr_gamma} na straně \pageref{eq:viskozimetr_gamma}) při různých rychlostech deformace. Naměřená (zdánlivá) viskozita se tedy bude lišit, protože se nejedná o newtonovskou kapalinu.
+    \item \underline{\smash{Různá hloubka ponoru vřetena}}: Měřené množství čokolády (\SI{100}{\gram}) nestačí k úplnému ponoření měřicího vřetena č. 1 (viz tabulku vřeten, str. \pageref{tab:vretena}), vřeteno je v čokoládě ponořeno zhruba z poloviny. Naměřená viskozita tedy bude alespoň dvakrát menší, než její skutečná hodnota. 
+    \item \underline{\smash{Měření je prováděné při různých rychlostech deformace}}: Vzhledem k tomu, že jednotlivá vřetena mají různé poloměry (opět viz tabulku vřeten, str. \pageref{tab:vretena}), bude měření různými vřeteny prováděno (dle vztahu \ref{eq:viskozimetr_gamma} na straně \pageref{eq:viskozimetr_gamma}) při různých rychlostech deformace. Naměřená (zdánlivá) viskozita se tedy bude lišit, protože se nejedná o newtonovskou kapalinu.
 \end{itemize}
 Mezi hloubkou ponoru vřetena a naměřenou viskozitou by měl být, pokud zanedbáme tření s horní podstavou válce, lineární vztah, a tato chyba by tedy měla být jednoduše odstranitelná.
 \par\noindent
