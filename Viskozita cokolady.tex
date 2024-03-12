@@ -626,7 +626,7 @@ Reopexe je poměrně vzácným úkazem. Reopexními vlastnostmi se však vyznač
 
 U tixotropních látek dochází při působení tečného napětí v~kapalině k~postupnému snížení viskozity. Příčiny tixotropního chování jsou nejspíše totožné s~příčinami pseudoplasticity (viz str. \pageref{sec:pseudoplasticita}). Přeuspořádání částic v~kapalině však nějakou dobu trvá, naopak při uvolnění napětí se částice dlouhou dobu dostávají do méně uspořádaného stavu. Z~tohoto důvodu zde dochází k~tzv.~\emph{hysterezi}: látka si nějakou dobu \glqq pamatuje\grqq, jakou deformaci podstoupila. Při uvolnění napětí se tedy zdánlivá viskozita nevrací po téže křivce. Toto je znázorněné na obrázku \ref{fig:tixotropni_kap}.~\cite{thesis:Viskozimetr_pro_viskozni_materialy}
 \par
-Příkladů tixotropních látek je v~porovnání s~ostatními druhy nenewtonovských kapalin mnoho (už jen kvůli principu jejich fungování). Z~přírody např. tekutý písek, některé jíly a bahna, med nebo tělní tekutiny (lidské semeno).~\cite{wiki:Thixotropy} Z~dalších uveďme například jogurt, cement, nebo pájecí pasty.~\cite{Article:Thixotropy}\cite{article:cement}\cite{thesis:Viskozimetr_pro_viskozni_materialy}\cite{wiki:Time-dependent_viscosity}
+Příkladů tixotropních látek je v~porovnání s~ostatními druhy nenewtonovských kapalin mnoho (už jen kvůli principu jejich fungování). Z~přírody např. tekutý písek, některé jíly a bahna, med nebo tělní tekutiny (lidské semeno).~\cite{wiki:Thixotropy} Z~dalších uveďme například jogurt, cement, nebo pájecí pasty.~\cite{Article:Thixotropy}\cite{Article:cement}\cite{thesis:Viskozimetr_pro_viskozni_materialy}\cite{wiki:Time-dependent_viscosity}
 
 \begin{figure}
     \centering
@@ -866,6 +866,7 @@ kde $m$ je hmotnost koule, $V$ je objem vytlačené kapaliny, zde tedy objem kou
     F_\eta = 6\pi r\eta v\text{,}
 \end{equation}
 kde $r$ je poloměr koule, $\eta$ je dynamická viskozita tekutiny a $v$ je rychlost pohybu koule skrz kapalinu.\footnotemark Dohromady tedy platí:
+\footnotetext{Tento zákon platí pouze pro malá Reynoldsova čísla, tj. pro laminární obtékání koule a malé rychlosti.}
 \begin{equation}
     mg = V\rho g + 6\pi r\eta v\text{.}
 \end{equation}
@@ -883,7 +884,7 @@ a pokud $v = \frac{\Delta h}{t}$, kde $\Delta h$ je dráha, kterou padající ko
     \label{eq:kulickovy_viskozimetr}
 \end{equation}
 kde čas $t$ je jediná proměnná (a tedy měřená) veličina.
-\footnotetext{Tento zákon platí pouze pro malá Reynoldsova čísla, tj. pro laminární obtékání koule a malé rychlosti.}
+
 
 \subsubsection{Konstrukce a použití}
 
@@ -928,7 +929,7 @@ Pro moment síly platí $M = F\cdot d$, kde $F$ je síla a $d$ je rameno síly. 
 \begin{equation}
     \dd M = -2\pi r^3h\eta\frac{\dd \omega}{\dd r}
 \end{equation}
-Moment působící na skutečný ponořený válec je pak součtem všech těchto malých momentů $\dd M$. Integrováním vzhledem k $r$ získáváme:~\cite{book:Calibration_of_viscometers}\cite{article:barr}
+Moment působící na skutečný ponořený válec je pak součtem všech těchto malých momentů $\dd M$. Integrováním vzhledem k $r$ získáváme:~\cite{book:Calibration_of_viscometers}\cite{Article:barr}
 \begin{equation}
     M = 4\pi h\eta\Omega\frac{R^2R_v^2}{R^2-R_v^2}\text{.}
     \label{eq:moment_viskozimetr}
@@ -1000,7 +1001,8 @@ Měřicí vřeteno je poháněno motorem v přístroji. Vřeteno však není spo
 
 \subsection{Složení čokolády}
 
-Čokoláda je (ve svém kapalném skupenství) suspenzí různých rozptýlených látek v kakaovém másle. V hořkých čokoládách tvoří rozpuštěné látky částečky kakaa a cukr.~\cite{article:chocolate_composition}
+Čokoláda je (ve svém kapalném skupenství) suspenzí různých rozptýlených látek v kakaovém másle. V hořkých čokoládách tvoří rozpuštěné látky částečky kakaa a cukr (sacharóza). V mléčných čokoládách je kakaová složka částečně nahrazená mléčnou sušinou.~\cite{Article:chocolate_composition}\cite{Article:Determination_of_chocolate_viscosity}\cite{wiki:Chocolate}
+\par\noindent
 
 \subsection{Reologické vlastnosti}
 \label{sec:Reologické_vlastnosti_čokolády}
@@ -1009,7 +1011,7 @@ Popsat reologické vlastnosti čokolády není vůbec jednoduché.~\cite{Article
 
 \subsubsection{Binghamské látky}
 
-Látkám, které začínají téci až od určitého tečného napětí říkáme \emph{plastické}.~\cite{material:Nenewtonovské_kapaliny}\cite{material:Viskozita_a_povrchove_napeti} Nejjednodušší formou plastické látky je tzv. \emph{binghamská látka}. Pro ní platí, že se až do tečného napětí $\tau_0$ chová jako pevná látka (tj. neteče a chová se podle Hookeova zákona, viz str. \pageref{sec:Hookeův_zákon}): toto napětí $\tau_0$ nazýváme \emph{prahové napětí}.~\cite{wiki:Bingham_plastic}\cite{material:Tokove_chovani_reologicke_modely} Od prahového napětí začíná binghamská látka téct a vztah rychlosti deformace a tečného napětí je při všech vyšších tečných napětích lineární (toková křivka je přímkou). Zdánlivá viskozita však s rostoucím tečným napětím klesá, viz obr. \ref{fig:apparent_viscosity}. Při limitním zvyšování tečného napětí (resp. rychlosti deformace) k nekonečnu získáváme hodnotu zdánlivé viskozity $\eta_\infty$ v těchto krajních hodnotách. Pro popis chování binghamských látek pak platí vztah:~\cite{Article:Comparison_of_models_chocolate}\cite{article:Extended_casson_equation}
+Látkám, které začínají téci až od určitého tečného napětí říkáme \emph{plastické}.~\cite{material:Nenewtonovské_kapaliny}\cite{material:Viskozita_a_povrchove_napeti} Nejjednodušší formou plastické látky je tzv. \emph{binghamská látka}. Pro ní platí, že se až do tečného napětí $\tau_0$ chová jako pevná látka (tj. neteče a chová se podle Hookeova zákona, viz str. \pageref{sec:Hookeův_zákon}): toto napětí $\tau_0$ nazýváme \emph{prahové napětí}.~\cite{wiki:Bingham_plastic}\cite{material:Tokove_chovani_reologicke_modely} Od prahového napětí začíná binghamská látka téct a vztah rychlosti deformace a tečného napětí je při všech vyšších tečných napětích lineární (toková křivka je přímkou). Zdánlivá viskozita však s rostoucím tečným napětím klesá, viz obr. \ref{fig:apparent_viscosity}. Při limitním zvyšování tečného napětí (resp. rychlosti deformace) k nekonečnu získáváme hodnotu zdánlivé viskozity $\eta_\infty$ v těchto krajních hodnotách. Pro popis chování binghamských látek pak platí vztah:~\cite{Article:Comparison_of_models_chocolate}\cite{Article:Extended_casson_equation}
 \begin{equation}
     \tau = \tau_0 + \eta_B\cdot \dot\gamma\text{,}
     \label{eq:Bingham}
@@ -1020,7 +1022,7 @@ Jelikož se binghamské látky vyznačují právě onou lineární závislostí 
 
 \subsubsection{Herschelovy–Bulkleyovy tekutiny}
 
-Spojením Ostwaldovy-deWaaleovy rovnice (str. \pageref{eq:ostwald_dewaale}) a binghamského modelu získáváme vztah popisující tzv. Herschelovu-Bulkleyho tekutinu:~\cite{Article:Comparison_of_models_chocolate}\cite{article:Extended_casson_equation}
+Spojením Ostwaldovy-deWaaleovy rovnice (str. \pageref{eq:ostwald_dewaale}) a binghamského modelu získáváme vztah popisující tzv. Herschelovu-Bulkleyho tekutinu:~\cite{Article:Comparison_of_models_chocolate}\cite{Article:Extended_casson_equation}
 \begin{equation}
     \tau = \tau_0 + \eta_{pl}\cdot\dot\gamma^n\text{,}
 \end{equation}
@@ -1039,7 +1041,7 @@ a tento model tedy ani při vysokých hodnotách tečného napětí nemůže vyj
 
 \subsubsection{Cassonův model}
 \label{sec:Casson}
-Tímto ideálním kompromisem je tzv. \emph{Cassonův model}. Je vyjádřen vztahem:~\cite{Article:Comparison_of_models_chocolate}\cite{Article:Determination_of_chocolate_viscosity}\cite{article:Extended_casson_equation}\cite{Article:Flow_properties_molten_chocolate}
+Tímto ideálním kompromisem je tzv. \emph{Cassonův model}. Je vyjádřen vztahem:~\cite{Article:Comparison_of_models_chocolate}\cite{Article:Determination_of_chocolate_viscosity}\cite{Article:Extended_casson_equation}\cite{Article:Flow_properties_molten_chocolate}
 \begin{equation}
     \sqrt{\tau} = \sqrt{\tau_{CA}} + \sqrt{\eta_{CA}\cdot\dot\gamma}\text{,}
     \label{eq:Casson_model}
@@ -1065,9 +1067,17 @@ Pro nízké hodnoty tečného napětí lze Cassonův model aproximovat Herschelo
 Pro své vlastnosti je Cassonův model základním používaným modelem používaným cukrářskými organizacemi po celém světě.~\cite{Article:Determination_of_chocolate_viscosity} Přesto lze tento model dále vylepšovat různými korekčními faktory, aby se jeho výsledky lépe přiblížily skutečným vlastnostem čokolády.~\cite{Article:Determination_of_chocolate_viscosity} Při nízkých hodnotách tečného napětí se někteří uchylují k používání tzv. \emph{Carreau} modelu, který nebudu dále rozebírat, nebo jiných modelů.~\cite{Article:Flow_properties_molten_chocolate}\cite{material:Tokove_chovani_reologicke_modely}
 
 \subsection{Vlastnosti kakaového másla}
+\subsubsection{Složení kakaového másla}
+
+Kakaové máslo tvoří triacylglyceroly esterifikované převážně dvěma nasycenými a jednou nenasycenou mastnou kyselinou: kyselinou palmitovou (nasycená), stearovou (nasycená) a olejovou (nenasycená). Každý triacylglycerol na sobě může mít navázanou jakoukoliv kombinaci mastných kyselin. Poměrné zastoupení jednotlivých triacylglycerolů v kakaovém másle pak ovlivňuje vlastnosti čokolády.~\cite{Article:precrystallization}\cite{wiki:Triacylglycerol}
+
+\subsubsection{Viskozita kakaového másla při jeho tuhnutí}
+
+Při ochlazování kakaového másla dochází nejdříve ke krystalizaci triacylglycerolů, které jsou tvořené nasycenými mastnými kyselinami. Tím dochází k rychlému zvýšení viskozity, kakaové máslo však zůstává v kapalném skupenství, protože triacylglyceroly tvořené i nenasycenými mastnými kyselinami krystalizují až při nižších teplotách: vzniká tedy suspenze. Triacylglyceroly tvořené třemi nasycenými mastnými kyselinami pak slouží jako krystalizační jádra pro další krystalizaci. Je však nutné podotknout, že příměsi v čokoládě značně ovlivňují mechanismus krystalizace kakaového másla.~\cite{Article:precrystallization}
+
 \subsubsection{Polymorfie a bod tání}
 \label{sec:polymorfie}
-Kakaové máslo je polymorfní látka.~\cite{article:cocoa_butter_polymorphism} To znamená, že je schopné krystalizovat do několika krystalických struktur.~\cite{wiki:Polymorfie} Každá z těchto krystalických struktur má odlišný bod tání. Body tání jednotlivých polymorfů kakaového másla jsou v tabulce \ref{tab:polymorfy}.
+Kakaové máslo je polymorfní látka.~\cite{Article:cocoa_butter_polymorphism} To znamená, že je schopné krystalizovat do několika krystalických struktur.~\cite{wiki:Polymorfie} Každá z těchto krystalických struktur má odlišný bod tání. Body tání jednotlivých polymorfů kakaového másla jsou v tabulce \ref{tab:polymorfy}.
 \begin{table}[]
     \centering
     \begin{tabular}{|c|c|}
@@ -1080,18 +1090,29 @@ Kakaové máslo je polymorfní látka.~\cite{article:cocoa_butter_polymorphism} 
         $\beta_1$ & 33,5 -- 36,3\\
         \hline
     \end{tabular}
-    \caption{Rozsahy bodů tání jednotlivých polymorfů kakaového másla.\cite{article:cocoa_butter_polymorphism}}
+    \caption{Rozsahy bodů tání jednotlivých polymorfů kakaového másla.\cite{Article:cocoa_butter_polymorphism}}
     \label{tab:polymorfy}
 \end{table}
-Čokoláda se vyrábí tak, aby většina kakaového másla krystalizovala do polymorfu $\beta_2$.~\cite{article:cocoa_butter_tempering} Čokoláda by ve stavu, ve kterém ji koupíme, měla mít bod tání mezi 30 a \SI{35}{\degreeCelsius}.
+Čokoláda se vyrábí tak, aby většina kakaového másla krystalizovala do polymorfu $\beta_2$.~\cite{Article:cocoa_butter_tempering} Čokoláda by ve stavu, ve kterém ji koupíme, měla mít bod tání mezi 30 a \SI{35}{\degreeCelsius}.
 \par\noindent
-Při tuhnutí z kapalného skupenství však čokoláda krystalizuje pouze do polymorfů $\alpha$, $\beta_1'$ a $\beta_2'$.~\cite{article:molecular_polymorphism} Přetavená čokoláda má tedy nižší bod tání a jiné reologické a pevnostní vlastnosti než taková, která od výroby neroztála.\footnotemark Výrobní proces čokolády pak musí být navržen tak, aby došlo ke krystalizaci do polymorfu $\beta_2$. Po procesu konšování (způsob promíchávání taveniny) je čokoláda opakovaně zahřívána a ochlazována v různém rozmezí teplot, po vylití do forem je čokoláda protřepána pomocí vibračního zařízení, aby byla zajištěna krystalizace do správného polymorfu.~\cite{wiki:čokoláda}\cite{wiki:konšování}\cite{article:viscosity_molten_milk_chocolate}
-\footnotetext{S tímto jevem se čtenář mohl setkat, pokud mu čokoláda někdy roztála třeba v~batohu nebo v~kapse.}
+Polymorf $\alpha$ krystalizuje do šesterečné, polymorfy $\beta_2'$ a $\beta_1'$ do do kosočtverečné a polymorfy $\beta_2$ a $\beta_1$ do trojklonné krystalografické soustavy.~\cite{Article:precrystallization}\cite{wiki:crystal_structure}
+\par\noindent
+Při tuhnutí z kapalného skupenství však čokoláda krystalizuje pouze do polymorfů $\alpha$, $\beta_1'$ a $\beta_2'$.~\cite{Article:molecular_polymorphism} Přetavená čokoláda má tedy nižší bod tání a jiné reologické a pevnostní vlastnosti než taková, která od výroby neroztála.\footnote{S tímto jevem se čtenář mohl setkat, pokud mu čokoláda někdy roztála třeba v~batohu nebo v~kapse.} Výrobní proces čokolády pak musí být navržen tak, aby došlo ke krystalizaci do polymorfu $\beta_2$. Po procesu konšování (způsob promíchávání taveniny) je čokoláda opakovaně zahřívána a ochlazována v různém rozmezí teplot, kdy dochází k takzvané \emph{prekrystalizaci}, po vylití do forem může být čokoláda protřepána pomocí vibračního zařízení, aby byla zajištěna krystalizace do správného polymorfu (musí dojít k přechodu z kosočtverečné do trojklonné krystalografické soustavy).~\cite{wiki:čokoláda}\cite{wiki:konšování}\cite{Article:viscosity_molten_milk_chocolate} V komerčně dostupných čokoládách je zhruba 60 -- 80 \% kakaového másla ve formě polymorfu $\beta_2$.~\cite{Article:precrystallization}
+
+\subsubsection{Závislost viskozity na teplotě}%%%%%%%%%%%%%%%%%%%%%%%%
+
+Zdánlivou viskozitu při určité teplotě lze při dostatečně vysokých teplotách, kdy je kakaové máslo dokonale roztavené, aproximovat vztahem:~\cite{article:Rheological_behaviour_chocolate_temeperature}
+\begin{equation}
+    \eta(t) = at^b\text{,}
+\end{equation}
+kde $\eta(t)$ je zdánlivá viskozita při teplotě $t$ [\SI{}{\degreeCelsius}] a $a$ a $b$ jsou materiálové konstanty zjištěné experimentálně.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Výběr vhodné aparatury}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
-\section{Výběr vhodné aparatury}
 K měření viskozity čokolády byly zpočátku uvažovány všechny výše zmíněné metody. Za účelem výběru jedné z nich byly měřicí metody vyzkoušeny. O metodice tohoto testování pojednává tato kapitola.
 \subsection{Kapilární viskozimetr}
 \noindent \underline{Pomůcky}: kapilární viskozimetr, vhodný stojan, stopky, případně kamera
@@ -1157,7 +1178,7 @@ Rotační viskozimetr, teploměr, hrnec nebo velká krystalizační miska, kádi
 
 \subsection{Popis aparatury}
 Ústřední částí aparatury je vodní lázeň. Krystalizační miska naplněná vodou je umístěna na laboratorním zvedáčku. V~krystalizační misce je umístěna kovová kádinka (součástí příslušenství viskozimetru) určená k~tavení čokolády (standardně bylo taveno \SI{100}{\gram} čokolády). Teplota vody v~lázni je monitorována teploměrem. \label{sec:teploměr}
-V~mém případě byl použit meteorologický teploměr půdní lomený (z~vlastní sbírky), jehož měřicí kapalinou je rtuť. Tento teploměr je vhodný díky svému tvaru, měřicímu rozsahu \SI{-21}{} \hspace{-4pt} \textendash \hspace{0pt} \SI{61}{\degreeCelsius}, přesností odečítání teploty na \SI{0,1}{\degreeCelsius} a krátké hysterezi. Do kádinky s~čokoládou je ponořeno rotační těleso viskozimetru, tzv. \emph{vřeteno}. Čokoláda může být pro zajištění teplotní homogenity míchána skleněnou tyčinkou nebo jiným vhodným míchadlem. Celá aparatura je upevněna na laboratorním stojanu.
+V~mém případě byl použit meteorologický teploměr půdní lomený (z~vlastní sbírky), jehož měřicí kapalinou je rtuť. Tento teploměr je vhodný díky svému tvaru, měřicímu rozsahu \SI{-21}{} \hspace{-4pt} \textendash \hspace{0pt} \SI{61}{\degreeCelsius}, přesností odečítání teploty na \SI{0,1}{\degreeCelsius} a krátké hysterezi. Tento teploměr je vyfotografován na obr.~\ref{fig:teploměr} v příloze. Do kádinky s~čokoládou je ponořeno rotační těleso viskozimetru, tzv. \emph{vřeteno}. Čokoláda může být pro zajištění teplotní homogenity míchána skleněnou tyčinkou nebo jiným vhodným míchadlem. Celá aparatura je upevněna na laboratorním stojanu.
 \par Teplota lázně je udržována přiléváním vroucí vody z~rychlovarné konvice do lázně při poklesu teploty pod žádanou mez. Jedná se tak o práci vyžadující značnou pozornost a časté monitorování teploty obsluhou aparatury. Navíc je teplota lázně měněna skokově a rozsah, ve kterém se teplota lázně pohybuje, je velký (\SI{\pm 1,5}{\degreeCelsius} při teplotách kolem \SI{40}{\degreeCelsius}, \SI{\pm 4}{\degreeCelsius} při teplotách kolem \SI{60}{\degreeCelsius}). Množství vody v lázni se zároveň neustále zvyšuje a vodu je proto nutné při naplnění misky odčerpat do jiné nádoby hadičkou nebo trubičkou, která je v~lázni ponořena.
 \par
 \label{Vřetena}K měření viskozity byl použit rotační viskozimetr značky Haake model Viscotester VT-02. Konstrukcí se jedná o viskozimetr dle Brookfielda. Použité měřicí vřeteno bylo voleno podle viskozity čokolády. Pro čokolády s vyšší viskozitou bylo použito vřeteno ve tvaru nízkého válce pro rozsah \SI{100}{} \hspace{-4pt} \textendash \hspace{0pt} \SI{4000}{\deci\pascal\second}, (v tabulce označováno jako vřeteno č.~2). Pro čokolády s nižší viskozitou bylo použito vřeteno ve tvaru vysokého válce pro měřicí rozsah \SI{3}{} \hspace{-4pt} \textendash \hspace{0pt} \SI{160}{\deci\pascal\second}, (v tabulce hodnot jako vřeteno č.~1).~\cite{man:VT-02} Technické údaje o vřetenech tohoto viskozimetru jsou k nalezení v tabulce \ref{tab:vretena}.
@@ -1359,7 +1380,7 @@ Z naměřených hodnot se lze dopočítat k tečným napětím (viz tabulku \ref
 \par\noindent
 Hodnoty, ke kterým jsme tímto postupem dospěli, buď nedávají smysl nebo vůbec neexistují. Toto je nejspíš způsobeno vstupními hodnotami zdánlivé viskozity, která byla měřená vřetenem č.~1. Vřeteno č.~1 nebylo plně ponořeno, naměřené hodnoty tedy nelze použít přímo a je nutné je přepočítávat postupem, který je popsán v předchozí podkapitole. Tyto přepočtené výsledky už jsou (skrze koeficient $k$) závislé na údajích naměřených vřetenem č.~2. I malé změny tohoto koeficientu značným způsobem ovlivní řešení použité soustavy rovnic. Aby byla tato metoda použitelná, bylo by nutné měřit oběma vřeteny plnou kádinku čokolády, což by bylo časově ještě náročnější.
 \par\noindent
-I přesto, že by měly být výsledné hodnoty naprosto nesprávné, odpovídají (obzvláště u vyšších teplot) alespoň řádově hodnotám uváděných v odborné literatuře. Cassonova plastická viskozita čokolády se řádově pohybuje v jednotkách až desítkách \SI{}{\deci\pascal\second}, Cassonovo prahové napětí se řádově pohybuje v desítkách \SI{}{\pascal}.~\cite{Article:Rapid_and_economic_chocolate_viscosity}\cite{article:viscosity_molten_milk_chocolate}\cite{article:chocolate_shear_stress}
+I přesto, že by měly být výsledné hodnoty naprosto nesprávné, odpovídají (obzvláště u vyšších teplot) alespoň řádově hodnotám uváděných v odborné literatuře. Cassonova plastická viskozita čokolády se řádově pohybuje v jednotkách až desítkách \SI{}{\deci\pascal\second}, Cassonovo prahové napětí se řádově pohybuje v desítkách \SI{}{\pascal}.~\cite{Article:Rapid_and_economic_chocolate_viscosity}\cite{Article:viscosity_molten_milk_chocolate}\cite{Article:chocolate_shear_stress}
 
 \subsection{Anomálie v datech}
 \subsubsection{Viskozita čokolády Lindt 78\% při nízkých teplotách}
@@ -1429,8 +1450,8 @@ Výsledky měření jsou v naprosté většině případů smysluplné a uspokoj
     \item Přepočtené a zprůměrované hodnoty viskozit pro jednotlivé druhy čokolády
     \item Data k výpočtu Cassonovy plastické viskozity a Cassonova prahového napětí
     \item Data použita na obrázku \ref{fig:Lindt_78_anomalie}
-    \item Obrázky
     \item Odkazy
+    \item Obrázky
 \end{enumerate}
 
 
@@ -1639,19 +1660,100 @@ $$k = \frac{789,\overline{6} + 470}{209 + 127} = \frac{1256,\overline{6}}{336} \
 \end{table}
 
 \newpage
-\subsection*{Příloha č. 8: Obrázky}
+\subsection*{Příloha č. 8: Odkazy}
+\glqq Zdrojový kód\grqq\space této práce ve formátu .tex, jakožto tabulka s naměřenými daty, obrázky a obecně všechny podklady k této maturitní práci jsou k nalezení v gitovém repozitáři na adrese:\\\url{https://github.com/Xichtik/Maturitni-prace-Viskozita-cokolady.git}
+\par\noindent
+Samotná Google tabulka s naměřenými daty je dostupná na adrese:\url{https://docs.google.com/spreadsheets/d/1aIXDNuHhVtbhjn-V-A5yoDLF0yB9g1KJuwBW0kRpuE4/edit?usp=sharing}
+
+\newpage
+\subsection*{Příloha č. 9: Obrázky}
 \begin{figure}[h!]
     \begin{subfigure}[b]{.5\textwidth}
-        \includegraphics[angle = 270, width = \textwidth]{figures/muj_ostwald1.jpg}
+        \includegraphics[angle = 270, width = \textwidth]{prilohy/muj_ostwald1.jpg}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{.5\textwidth}
-        \includegraphics[angle = 270, width = \textwidth]{figures/muj_ostwald2.jpg}
+        \includegraphics[angle = 270, width = \textwidth]{prilohy/muj_ostwald2.jpg}
     \end{subfigure}
     \caption{Použitý viskozimetr dle Ostwalda, jednou vyfocený na světlém a podruhé na tmavém pozadí. Konstanta viskozimetru $k = 0,3$. Za povšimnutí stojí plnicí a měřicí rysky.}
     \label{fig:muj_ostwald}
 \end{figure}
 
-\newpage
-\subsection*{Příloha č. 9: Odkazy}
+\begin{figure}
+    \centering
+    \includegraphics[angle = 270, width = 0.75\textwidth]{prilohy/aparatura_lab_vrch.jpg}
+    \caption{Pohled na první implementaci aparatury z vrchu. V~lázni je umístěna kovová kádinka s~čokoládovou taveninou. Do ní je ponořeno měřicí vřeteno viskozimetru. Miska lázně je umístěna na laboratorním zvedáčku a teplota vody v ní je měřena teploměrem. Z lázně vede trubička určená k odčerpání přebytečné vody z lázně.}
+    \label{fig:aparatura_lab_bok}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \begin{subfigure}[b]{\textwidth}
+    \centering
+        \includegraphics[width = \textwidth]{prilohy/aparatura_lab_bok.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width = \textwidth]{prilohy/lab_lázeň.jpg}
+    \end{subfigure}
+    \caption{Pohled na první implementaci aparatury z boku (nahoře) a detailní záběr lázně (dole). V~lázni je umístěna kovová kádinka s~čokoládovou taveninou. Do ní je ponořeno měřicí vřeteno viskozimetru. Miska lázně je umístěna na laboratorním zvedáčku a teplota vody v ní je měřena teploměrem. Na spodním obrázku je vidět trubička, která je určena k odčerpávání přebytečné vody z lázně.}
+    \label{fig:aparatura_lab}
+\end{figure}
+\begin{figure}
+    \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{prilohy/aparatura_bok.jpg}
+        \caption{Pohled na druhou implementaci aparatury z boku. Červený hrnec tvoří vodní lázeň. V něm je umístěna kovová kádinka s čokoládovou taveninou, do které je umístěno měřicí vřeteno viskozimetru. Z lázně obloukem vede plastová hadice určená k odčerpávání přebytečné vody z lázně. V~lázni je zároveň umístěn stonek rtuťového teploměru, který se opírá o krabici Schoko Müsli. \SI{9}{\volt} baterie v~pravé spodní části obrázku napájí modul termostatu (zhruba uprostřed obrázku). Termostat indikuje teplotu lázně \SI{50,8}{\degreeCelsius}. V lázni je umístěna cívka smotaná z měděného drátu (na obrázku není vidět), která slouží jako topné těleso. Dobře je vidět do hrnce ponořený červený vodič, který cívku napájí. Topné těleso je napájeno pomocí laboratorního zdroje stejnosměrného napětí (levá dolní část obrázku).}
+        \label{fig:aparatura_bok}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{\textwidth}
+        \includegraphics[width = \textwidth]{prilohy/viskozimetr_1.jpg}
+        \caption{Detail indikační části použitého viskozimetru. Při použitém měřicím vřetenu č.~2 je naměřená hodnota zdánlivé viskozity zhruba \SI{360}{\deci\pascal\second}.}
+    \end{subfigure}
+    \caption{Pohled na druhou implementaci aparatury z boku (nahoře) a detail použitého rotačního viskozimetru (dole).}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \begin{subfigure}[t]{.45\textwidth}
+        \includegraphics[angle = 270, width = \textwidth]{prilohy/aparatura_vrch.jpg}
+        \caption{Pohled na druhou implementaci aparatury z vrchu. Z hrnce ve spodní části obrázku, který tvoří vodní lázeň, vede plastová hadička k odčerpávání přebytečné vody z lázně. Nad hrncem, resp.~kádinkou s~čokoládovou taveninou, je umístěn viskozimetr. Do vodní lázně je ponořen stonek rtuťového teploměru. V~levé části obrázku je vidět laboratorní zdroj, termostat indikující teplotu lázně \SI{40,2}{\degreeCelsius} a \SI{9}{\volt} baterie napájející termostat. Indikační LED termostatu nesvítí, relé termostatu je tedy rozepnuté a lázeň není vyhřívána (nastavená teplota byla \SI{40,0}{\degreeCelsius}).}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{.45\textwidth}
+        \includegraphics[angle = 270, width = \textwidth]{prilohy/elektro.jpg}
+        \caption{Detail termostatu a laboratorního zdroje stejnosměrného napětí. Termostat indikuje teplotu lázně \SI{39,9}{\degreeCelsius} a červená LED svítí, ohřev je tedy zapnutý (nastavená teplota byla \SI{40,0}{\degreeCelsius}). Na termostat je v horní části napojena dvojice černých vodičů, na které je napojeno čidlo (termistor) umístěné v lázni. Ve spodní části je do svorkovnice termostatu zapojena dvojice tlustých vodičů (červený a černý), které napájejí topné těleso, a dvojice tenkých vodičů (hnědo-modrý a žluto-šedivý), které napájejí samotný termostat. Laboratorní zdroj indikuje napětí \SI{24,7}{\volt} a proud \SI{5,14}{\ampere}, kterým je topné těleso napájeno.}
+    \end{subfigure}
+    \caption{Pohled na druhou implementaci aparatury z vrchu (vlevo) a detail laboratorního zdroje a termostatu (vpravo).}
+    \label{fig:elektro}
+\end{figure}
+
+\begin{figure}[h!]
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width = \textwidth]{prilohy/lázeň_1.jpg}
+        \caption{Detail lázně. V kovové kádince se nachází čokoládová tavenina, do které je ponořeno měřicí vřeteno viskozimetru. V lázni je umístěna cívka smotaná z měděného drátu, která tvoří topné těleso.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width = \textwidth]{prilohy/lázeň_2.jpg}
+        \caption{Detail lázně. V kovové kádince se nachází čokoládová tavenina, do které je ponořeno měřicí vřeteno viskozimetru. Z lázně vede plastová hadička určená k odčerpávání přebytečné vody z lázně. Vedle ní je vidět stonek rtuťového teploměru.}
+    \end{subfigure}
+    \caption{Detail lázně.}
+    \label{fig:lazen}
+\end{figure}
+
+\begin{figure}[h!]
+    \begin{subfigure}[b]{.5\textwidth}
+        \includegraphics[angle = 270, width = \textwidth]{prilohy/teploměr_1.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{.5\textwidth}
+        \includegraphics[angle = 270, width = \textwidth]{prilohy/teploměr_2.jpg}
+    \end{subfigure}
+    \caption{Teploměr použitý k měření teploty lázně. Jedná se o meteorologický půdní lomený teploměr (více informací na str.~\pageref{sec:teploměr}). Na levém obrázku je naměřená teplota \SI{44,5}{\degreeCelsius}, na pravém \SI{39,8}{\degreeCelsius}.}
+    \label{fig:teploměr}
+\end{figure}
+
+
 \end{document}
